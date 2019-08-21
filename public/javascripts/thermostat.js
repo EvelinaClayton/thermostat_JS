@@ -1,9 +1,9 @@
 'use strict';
 
 var Thermostat = function () {
-  this.MINIMUM_TEMPERATURE = 10;
-  this.temperature = 20;
-  this.powerMode = true;
+    this.MINIMUM_TEMPERATURE = 10;
+    this.temperature = 20;
+    this.powerMode = true;
 };
 
 Thermostat.prototype = {
@@ -14,17 +14,20 @@ Thermostat.prototype = {
         this.temperature += 1;
     },
     decrease: function () {
-      if (this.isMinimumTemperature()) {
-        return;
-      }
-      this.temperature -= 1;
+        if (this.isMinimumTemperature()) {
+            return;
+        }
+        this.temperature -= 1;
     },
-  
-    isMinimumTemperature: function () {
-      return this.temperature === this.MINIMUM_TEMPERATURE;
-    }
 
+    isMinimumTemperature: function () {
+        return this.temperature === this.MINIMUM_TEMPERATURE;
+    },
+
+    powerModeOff: function () {
+        return this.powerMode = false;
+    }
 };
 
-var aThermostat = new Thermostat ();
+var aThermostat = new Thermostat();
 console.log(aThermostat)

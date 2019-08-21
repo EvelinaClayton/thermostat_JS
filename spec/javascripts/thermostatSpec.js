@@ -26,7 +26,28 @@ describe('Thermostat', function () {
         }
         expect(thermostat.getCurrentTemperature()).toEqual(10);
     });
-    it('has power saving mode on by default', function() {
+    it('has power saving mode on by default', function () {
         expect(thermostat.powerMode).toBe(true);
+    });
+
+    it('has has maximum temperature of 25 when powerMode is on', function () {
+        for (var i = 20; i < 25; i++) {
+            thermostat.increase();
+        }
+        expect(thermostat.getCurrentTemperature()).toEqual(25);
+    });
+
+    it('power mode turns off', function () {
+        thermostat.powerModeOff();
+        expect(thermostat.powerMode).toBe(false);
+    });
+
+    it('when power mode is off, we can increase temperature to 32 degrees', function () {
+        thermostat.powerModeOff();
+        expect(thermostat.powerMode).toBe(false);
+        for (var i = 20; i < 32; i++) {
+            thermostat.increase();
+        }
+        expect(thermostat.getCurrentTemperature()).toEqual(32);
     });
 });
