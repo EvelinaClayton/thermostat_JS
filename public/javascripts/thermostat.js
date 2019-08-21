@@ -7,10 +7,13 @@ var Thermostat = function () {
 
 
 Thermostat.prototype = {
-   getCurrentTemperature: function() {
-     return this.temperature;
-   },
-   increase: function () {
-    this.temperature += 1;
-},
+    getCurrentTemperature: function () {
+        return this.temperature;
+    },
+    increase: function () {
+        this.temperature += 1;
+    },
+    decrease: function () {
+        this.temperature -= 1;
+    },
 };
