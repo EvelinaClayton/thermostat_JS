@@ -2,7 +2,7 @@
 
 Specifications : Thermostat 
 
-Thermostat starts at 20 degrees
+Thermostat starts at 20 degrees x
 You can increase the temperature with an up function
 You can decrease the temperature with a down function
 The minimum temperature is 10 degrees
@@ -18,3 +18,7 @@ User story:
 As a thermostat
 I want to read 20 degrees 
 So I can se 20 degrees on my metre. 
+
+As a thermostat
+I would like to increase my temperature
+So that I can increase my temperature 
