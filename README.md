@@ -22,3 +22,11 @@ So I can se 20 degrees on my metre.
 As a thermostat
 I would like to increase my temperature
 So that I can increase my temperature 
+
+As a thermostat
+I would like to decrease my temperature
+So that I can decrease my temperature
+
+As a thermostat
+To save power
+I would like to set a maximum temperature to 25 degrees
